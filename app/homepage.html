@@ -1,0 +1,246 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LucaDCZ. — Frontend Developer</title>
+<!-- Google Fonts: Inter & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              purple: '#7C3AED',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Page Styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .font-display {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+  </style>
+<style data-purpose="animations-and-decorations">
+    /* Subtle decorative circle ring matching hero profile design */
+    .avatar-ring {
+      box-shadow: 0 0 0 28px rgba(124, 58, 237, 0.08), 0 0 0 56px rgba(124, 58, 237, 0.03);
+    }
+    /* Smooth button transitions */
+    .btn-hover {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-hover:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+<!-- END: Custom Page Styles -->
+</head>
+<body class="bg-[#FAFAFC] text-slate-800 antialiased min-h-screen flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
+<!-- BEGIN: MainHeader -->
+<header class="w-full bg-[#FAFAFC]/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 transition-colors" data-purpose="site-header">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-24 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="group flex items-center space-x-1" data-purpose="brand-logo" href="#">
+<span class="text-2xl font-black tracking-tight text-slate-900 font-display">Nahom Mulualem</span>
+</a>
+<!-- Desktop Navigation Menu -->
+<nav aria-label="Main Navigation" class="hidden md:flex items-center space-x-8 text-[15px] font-medium text-slate-600">
+<a class="text-brand-purple font-semibold hover:text-brand-purple transition-colors" href="#home">Home</a>
+<a class="hover:text-slate-900 transition-colors" href="#about">About</a>
+<a class="hover:text-slate-900 transition-colors" href="#projects">Projects</a>
+<a class="hover:text-slate-900 transition-colors" href="#experience">Experience</a>
+<a class="hover:text-slate-900 transition-colors" href="#skills">Skills</a>
+
+</nav>
+<!-- Quick Contact / Chat Button -->
+<div class="flex items-center space-x-4" data-purpose="header-action">
+<a aria-label="Send message" class="w-11 h-11 rounded-full bg-slate-900 hover:bg-brand-purple text-white flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-indigo-500/25" href="#contact">
+<!-- Chat bubble icon -->
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M12 3C6.477 3 2 6.94 2 11.8c0 2.278.966 4.35 2.585 5.92-.375 1.554-1.282 3.193-1.328 3.277a.5.5 0 0 0 .54.72c2.052-.3 3.906-1.077 5.166-1.782.97.29 2.002.445 3.037.445 5.523 0 10-3.94 10-8.8S17.523 3 12 3zm-4.5 9.75a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm4.5 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm4.5 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path>
+</svg>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main class="flex-grow">
+<!-- BEGIN: HeroSection -->
+<section class="py-12 md:py-20 lg:py-28 overflow-hidden relative" data-purpose="hero-section" id="home">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Column: Intro & Call-to-Actions -->
+<div class="lg:col-span-7 flex flex-col items-start z-10">
+<!-- Greeting Pill / Text -->
+<div class="inline-flex items-center gap-2 mb-4 text-slate-700 text-lg md:text-xl font-medium tracking-tight">
+<span class=""><br></span>
+<span class="text-2xl inline-block origin-[70%_70%] animate-pulse"><br></span>
+</div>
+<!-- Big Bold Title with exact brand styling -->
+<h1 class="text-6xl sm:text-7xl lg:text-[88px] tracking-tight font-extrabold font-display leading-[1.05] mb-6">
+<span class="text-brand-purple">FullStack</span><br>
+<span class="text-slate-900">Developer</span>
+</h1>
+<!-- Descriptive Subtitle -->
+<p class="text-lg sm:text-xl text-slate-500 font-normal leading-relaxed max-w-lg mb-10">
+              I'm a fullstack developer based in ethiopia, I'll help you build beautiful websites your users will love.
+            </p>
+<!-- Call to Actions -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="btn-hover px-7 py-3.5 bg-slate-900 text-white text-sm font-semibold rounded-xl shadow-lg shadow-slate-900/10 hover:bg-brand-purple hover:shadow-brand-purple/20 transition-all" href="#contact">
+                Get In Touch
+              </a>
+<a class="btn-hover px-7 py-3.5 bg-[#EEF0F3] hover:bg-[#E5E7EB] text-slate-800 text-sm font-semibold rounded-xl transition-all" href="#projects">
+                Browse Projects
+              </a>
+</div>
+<!-- Modern Micro Stats / Badges -->
+<div class="mt-14 pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-6 w-full max-w-lg">
+<div>
+<span class="block text-2xl lg:text-3xl font-bold font-display text-slate-900"><br></span>
+<span class="text-xs sm:text-sm text-slate-500 font-medium"></span>
+</div>
+<div>
+<span class="block text-2xl lg:text-3xl font-bold font-display text-slate-900"><br></span>
+<span class="text-xs sm:text-sm text-slate-500 font-medium"></span>
+</div>
+<div>
+<span class="block text-2xl lg:text-3xl font-bold font-display text-slate-900"><br></span>
+<span class="text-xs sm:text-sm text-slate-500 font-medium"></span>
+</div>
+</div>
+</div>
+<!-- Right Column: Stylized Portrait Frame -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end items-center relative">
+<!-- External subtle circular stroke container -->
+<div class="relative flex items-center justify-center p-8 sm:p-12">
+<!-- Subtle decorative purple circle ring matching original visual -->
+<div class="absolute inset-0 rounded-full border border-purple-200/70 scale-100 pointer-events-none"></div>
+<div class="absolute inset-4 sm:inset-6 rounded-full border border-indigo-100 pointer-events-none"></div>
+<!-- Profile Avatar Round Wrapper -->
+<div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl bg-slate-200 z-10 ring-4 ring-white">
+<!-- Using reference image directly with styled centering -->
+<img alt="Portrait of Luca, Frontend Developer" class="w-full h-full object-cover object-[75%_55%] filter grayscale contrast-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDotbl32-oH9f9mfQ2PnSTmbQANp-J0yFeAP3dJEK-YwUIbXfTjB3ZkJsFz8YNTzDIXb9e2Noa9ti0_JFMEqz7mj9ocbiQC-hPtwaVXoE4vB4KBoIQQYk0t_XJCxf1tSzoeUq3nA9ZiWNGjlRVl023mXTe0EqVQjXiUamNASWQvs0L0gl-yP4yEIZbHD9OJ26N9IK1JnkSeTJjgp-FFSCcyh9Jg3zJrRZCevjjcjs5REg75cBAhGTGJr6vSuGkuNvTfWg">
+</div>
+<!-- Floating subtle status badge -->
+<div class="absolute bottom-4 right-6 sm:bottom-8 sm:right-12 z-20 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-2.5">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+</span>
+<span class="text-xs font-semibold text-slate-700">Available for projects</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: KeyHighlightsSection -->
+
+<!-- END: KeyHighlightsSection -->
+<!-- BEGIN: SkillsAndExperienceSection -->
+<section class="py-20" data-purpose="skills-overview" id="skills">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+<div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-100 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="max-w-xl">
+
+<h2 class="text-2xl sm:text-3xl font-bold font-display text-slate-900 mt-2 mb-3">Modern tools for modern digital products</h2>
+<p class="text-slate-600 text-sm sm:text-base leading-relaxed">I prioritize clean, reusable code, accessible HTML semantics, type safety, and optimized responsive styles.</p>
+</div>
+<!-- Modern Technology Pill Tags -->
+<div class="flex flex-wrap gap-2.5 max-w-lg lg:justify-end">
+<span class="px-4 py-2 bg-slate-50 text-slate-800 text-sm font-semibold rounded-xl border border-slate-200/70 hover:border-purple-300 hover:bg-purple-50 transition-colors">React 19</span>
+<span class="px-4 py-2 bg-slate-50 text-slate-800 text-sm font-semibold rounded-xl border border-slate-200/70 hover:border-purple-300 hover:bg-purple-50 transition-colors">Next.js App Router</span>
+<span class="px-4 py-2 bg-slate-50 text-slate-800 text-sm font-semibold rounded-xl border border-slate-200/70 hover:border-purple-300 hover:bg-purple-50 transition-colors">TypeScript</span>
+<span class="px-4 py-2 bg-purple-50 text-brand-purple text-sm font-semibold rounded-xl border border-purple-200">Tailwind CSS v3</span>
+<span class="px-4 py-2 bg-slate-50 text-slate-800 text-sm font-semibold rounded-xl border border-slate-200/70 hover:border-purple-300 hover:bg-purple-50 transition-colors">HTML5 Semantics</span>
+<span class="px-4 py-2 bg-slate-50 text-slate-800 text-sm font-semibold rounded-xl border border-slate-200/70 hover:border-purple-300 hover:bg-purple-50 transition-colors">UI/UX Design</span>
+<span class="px-4 py-2 bg-slate-50 text-slate-800 text-sm font-semibold rounded-xl border border-slate-200/70 hover:border-purple-300 hover:bg-purple-50 transition-colors">GraphQL / REST</span>
+<span class="px-4 py-2 bg-slate-50 text-slate-800 text-sm font-semibold rounded-xl border border-slate-200/70 hover:border-purple-300 hover:bg-purple-50 transition-colors">Figma to Code</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SkillsAndExperienceSection -->
+<!-- BEGIN: ContactSection -->
+<section class="py-16 md:py-24 bg-white border-t border-slate-100" data-purpose="contact-cta" id="contact">
+<div class="max-w-4xl mx-auto px-6 text-center">
+
+<h2 class="text-3xl sm:text-5xl font-extrabold font-display text-slate-900 tracking-tight mb-6">Have a project in mind?</h2>
+<p class="text-slate-600 text-base sm:text-lg max-w-xl mx-auto mb-8">
+          Whether you need a custom landing page, full frontend build, or design system implementation, let's create something extraordinary together.
+        </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="btn-hover w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-xl font-medium shadow-xl hover:bg-brand-purple transition-all flex items-center justify-center gap-2" href="mailto:hello@lucadcz.dev">
+<span class="">Email Me</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+<a class="btn-hover w-full sm:w-auto px-8 py-4 bg-slate-100 text-slate-800 rounded-xl font-medium hover:bg-slate-200 transition-all" href="#home">
+            Back to Top
+          </a>
+</div>
+</div>
+</section>
+<!-- END: ContactSection -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-[#FAFAFC] border-t border-slate-200 py-10" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center space-x-2">
+<span class="text-lg font-bold font-display text-slate-900">Nahom Mulualem</span>
+<span class="text-slate-400 text-sm">© 2026. All rights reserved.</span>
+</div>
+<div class="flex items-center space-x-6 text-sm text-slate-500 font-medium">
+<a class="hover:text-brand-purple transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="hover:text-brand-purple transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="hover:text-brand-purple transition-colors" href="https://twitter.com" rel="noopener noreferrer" target="_blank">Telegram</a>
+
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: Simple UI Script -->
+<script data-purpose="smooth-navigation">
+    // Optional interactive smooth handling for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId !== '#') {
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+  </script>
+<!-- END: Simple UI Script -->
+
+
+</body></html>
