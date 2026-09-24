@@ -61,7 +61,7 @@ export default function Contact() {
     <section
       id="contact"
       data-purpose="contact-cta"
-      className="py-20 md:py-28 bg-white dark:bg-[#0B0F17] border-t border-slate-100 dark:border-slate-800 transition-colors"
+      className="py-20 md:py-28 bg-white/60 dark:bg-[#0B0F17]/60 backdrop-blur-sm border-t border-slate-100/80 dark:border-slate-800/80 transition-colors"
     >
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Section Header (Let's Connect removed per request) */}
