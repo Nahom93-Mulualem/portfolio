@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -44,11 +44,10 @@ export default function ThemeToggle() {
       <div className="relative w-5 h-5 overflow-hidden">
         {/* Sun Icon */}
         <svg
-          className={`w-5 h-5 absolute inset-0 transform transition-all duration-500 ease-out ${
-            isDark
+          className={`w-5 h-5 absolute inset-0 transform transition-all duration-500 ease-out ${isDark
               ? "rotate-90 scale-0 opacity-0 text-slate-400"
               : "rotate-0 scale-100 opacity-100 text-amber-500"
-          }`}
+            }`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -69,11 +68,10 @@ export default function ThemeToggle() {
 
         {/* Moon Icon */}
         <svg
-          className={`w-5 h-5 absolute inset-0 transform transition-all duration-500 ease-out ${
-            isDark
+          className={`w-5 h-5 absolute inset-0 transform transition-all duration-500 ease-out ${isDark
               ? "rotate-0 scale-100 opacity-100 text-indigo-400"
               : "-rotate-90 scale-0 opacity-0 text-slate-700"
-          }`}
+            }`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
