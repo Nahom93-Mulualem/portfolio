@@ -15,7 +15,26 @@ export default function Skills() {
     },
     {
       name: "Backend",
-      skills: ["Node.js", "NestJS", "Express.js", "FastAPI", "RESTful APIs"],
+      skills: [
+        "Node.js",
+        "NestJS",
+        "Express.js",
+        "Python",
+        "FastAPI",
+        "RESTful APIs",
+      ],
+    },
+    {
+      name: "Mobile",
+      skills: ["Flutter", "Dart", "React Native", "Expo"],
+    },
+    {
+      name: "Desktop",
+      skills: ["C#", ".NET 10", "WPF", "XAML", "libmpv"],
+    },
+    {
+      name: "AI & Intelligent Systems",
+      skills: ["AI / RAG", "ChromaDB", "Ollama", "Vector Search", "LLM Integration"],
     },
     {
       name: "Databases",
@@ -26,16 +45,21 @@ export default function Skills() {
       skills: ["Zustand", "TanStack Query"],
     },
     {
-      name: "Mobile",
-      skills: ["React Native", "Expo", "Flutter"],
-    },
-    {
       name: "Auth & Deployment",
       skills: ["NextAuth.js", "Vercel", "Netlify"],
     },
     {
       name: "Tools & Workflow",
-      skills: ["Git", "GitHub", "VS Code", "Figma"],
+      skills: [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma",
+        "xUnit",
+        "PowerShell",
+        "FFmpeg",
+        "Inno Setup",
+      ],
     },
   ];
 
@@ -46,9 +70,12 @@ export default function Skills() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 dark:text-white tracking-tight">
             Skills
           </h2>
+          <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            Technologies and frameworks across web, mobile, and desktop engineering, paired with emerging AI and intelligent application development.
+          </p>
         </div>
 
-        {/* Organized Categories Grid */}
+        {/* Organized Categories Grid (3x3 on large screens) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category) => (
             <div

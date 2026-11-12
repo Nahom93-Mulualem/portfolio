@@ -116,6 +116,7 @@ export const projectsData: Project[] = [
     statusType: "in-development",
     notes:
       "Under active development. Directed toward native libmpv integration, with FFmpeg/ffprobe and yt-dlp listed as optional external tools. Repository scripts utilize PowerShell and Inno Setup.",
+    githubUrl: "https://github.com/Nahom93-Mulualem/NJ-player",
     gradient: "from-slate-800 via-zinc-800 to-purple-950",
     previewType: "desktop",
   },
