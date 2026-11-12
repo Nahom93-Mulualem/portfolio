@@ -8,17 +8,15 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true);
-    const isDark =
-      document.documentElement.classList.contains("dark") ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-    setTheme(isDark ? "dark" : "light");
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
+      const stored = localStorage.getItem("theme");
+      if (stored === "light") {
+        setTheme("light");
+        document.documentElement.classList.remove("dark");
+      } else {
+        setTheme("dark");
+        document.documentElement.classList.add("dark");
+      }
+    }, []);
 
   const toggleTheme = () => {
     const nextTheme = theme === "light" ? "dark" : "light";
@@ -32,7 +30,7 @@ export default function ThemeToggle() {
     }
   };
 
-  const isDark = mounted ? theme === "dark" : false;
+  const isDark = mounted ? theme === "dark" : true;
 
   return (
     <button
@@ -45,8 +43,8 @@ export default function ThemeToggle() {
         {/* Sun Icon */}
         <svg
           className={`w-5 h-5 absolute inset-0 transform transition-all duration-500 ease-out ${isDark
-              ? "rotate-90 scale-0 opacity-0 text-slate-400"
-              : "rotate-0 scale-100 opacity-100 text-amber-500"
+            ? "rotate-90 scale-0 opacity-0 text-slate-400"
+            : "rotate-0 scale-100 opacity-100 text-amber-500"
             }`}
           fill="none"
           stroke="currentColor"
@@ -69,8 +67,8 @@ export default function ThemeToggle() {
         {/* Moon Icon */}
         <svg
           className={`w-5 h-5 absolute inset-0 transform transition-all duration-500 ease-out ${isDark
-              ? "rotate-0 scale-100 opacity-100 text-indigo-400"
-              : "-rotate-90 scale-0 opacity-0 text-slate-700"
+            ? "rotate-0 scale-100 opacity-100 text-indigo-400"
+            : "-rotate-90 scale-0 opacity-0 text-slate-700"
             }`}
           fill="none"
           stroke="currentColor"
