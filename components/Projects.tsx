@@ -124,10 +124,7 @@ export default function Projects() {
                   <div className="absolute -right-8 -bottom-8 w-36 h-36 bg-white/10 rounded-full blur-xl pointer-events-none" />
 
                   {/* Top Banner Tag Row */}
-                  <div className="flex items-center justify-between p-4 sm:p-5 pb-0 relative z-10">
-                    <span className="text-[11px] font-bold font-mono uppercase tracking-wider px-2.5 py-1 rounded-lg bg-black/30 backdrop-blur-md text-white/95">
-                      {project.id}
-                    </span>
+                  <div className="flex items-center justify-end p-4 sm:p-5 pb-0 relative z-10">
                     <span className="text-[11px] font-semibold px-2.5 py-1 rounded-lg bg-white/20 backdrop-blur-md text-white border border-white/20">
                       {project.platformBadge}
                     </span>
@@ -141,26 +138,6 @@ export default function Projects() {
 
                 {/* Card Body Content */}
                 <div className="p-6 sm:p-7">
-                  {/* Status badge */}
-                  <div className="flex items-center gap-2 mb-3">
-                    <span
-                      className={`text-[11px] font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1.5 ${
-                        project.statusType === "completed"
-                          ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/50"
-                          : "bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800/50"
-                      }`}
-                    >
-                      <span
-                        className={`w-1.5 h-1.5 rounded-full ${
-                          project.statusType === "completed"
-                            ? "bg-emerald-500"
-                            : "bg-amber-500 animate-pulse"
-                        }`}
-                      />
-                      {project.status}
-                    </span>
-                  </div>
-
                   {/* Project Title & Category */}
                   <h3 className="text-xl font-bold font-display text-slate-900 dark:text-white group-hover:text-brand-purple dark:group-hover:text-purple-400 transition-colors">
                     {project.title}

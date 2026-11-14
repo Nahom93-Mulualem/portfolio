@@ -46,27 +46,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         {/* Modal Header */}
         <div className="sticky top-0 z-20 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 px-6 py-4 flex items-center justify-between gap-4">
           <div className="flex items-center gap-2.5 flex-wrap">
-            <span className="text-xs font-bold font-mono px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-              {project.id}
-            </span>
             <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-purple-50 dark:bg-purple-950/50 text-brand-purple dark:text-purple-300 border border-purple-200/50 dark:border-purple-800/50">
               {project.platformBadge}
-            </span>
-            <span
-              className={`text-xs font-medium px-2.5 py-1 rounded-full flex items-center gap-1.5 ${
-                project.statusType === "completed"
-                  ? "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/60"
-                  : "bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800/60"
-              }`}
-            >
-              <span
-                className={`w-1.5 h-1.5 rounded-full ${
-                  project.statusType === "completed"
-                    ? "bg-emerald-500"
-                    : "bg-amber-500 animate-pulse"
-                }`}
-              />
-              {project.status}
             </span>
           </div>
 
@@ -123,54 +104,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             <ProjectThumbnail project={project} isExpanded={true} />
           </div>
 
-          {/* Architecture & Intent: Purpose, Problem, Solution */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Purpose */}
-            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 flex flex-col">
-              <div className="flex items-center gap-2 mb-2 text-brand-purple dark:text-purple-400">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                <h4 className="text-sm font-bold uppercase tracking-wider font-display">
-                  Purpose
-                </h4>
-              </div>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                {project.purpose}
-              </p>
-            </div>
-
-            {/* Problem */}
-            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 flex flex-col">
-              <div className="flex items-center gap-2 mb-2 text-amber-600 dark:text-amber-400">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
-                <h4 className="text-sm font-bold uppercase tracking-wider font-display">
-                  Problem
-                </h4>
-              </div>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                {project.problem}
-              </p>
-            </div>
-
-            {/* Solution */}
-            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 flex flex-col">
-              <div className="flex items-center gap-2 mb-2 text-emerald-600 dark:text-emerald-400">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <h4 className="text-sm font-bold uppercase tracking-wider font-display">
-                  Solution
-                </h4>
-              </div>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                {project.solution}
-              </p>
-            </div>
-          </div>
-
           {/* Key Features */}
           <div>
             <h4 className="text-base font-bold font-display text-slate-900 dark:text-white mb-3 flex items-center gap-2">
@@ -221,19 +154,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               ))}
             </div>
           </div>
-
-          {/* Development Notes / Context */}
-          {project.notes && (
-            <div className="p-4 rounded-2xl bg-purple-50/60 dark:bg-purple-950/20 border border-purple-200/70 dark:border-purple-900/40 text-xs sm:text-sm text-slate-600 dark:text-slate-300 flex items-start gap-3">
-              <span className="text-base shrink-0">ℹ️</span>
-              <div>
-                <span className="font-semibold text-slate-900 dark:text-white block mb-0.5">
-                  Project Status &amp; Roadmap Note:
-                </span>
-                <p className="leading-relaxed">{project.notes}</p>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Modal Footer Actions */}
